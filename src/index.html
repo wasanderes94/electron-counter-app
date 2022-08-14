@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Electron Counter App</title>
+  </head>
+  <body>
+    <div class="box center">
+      <p>Counter</p>
+      <div id="counter"></div>
+    </div>
+    <div class="btns center">
+      <button id="dec-btn" type="button" class="btn btn-subtract">-</button>
+      <button id="inc-btn" type="button" class="btn btn-add">+</button>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>
