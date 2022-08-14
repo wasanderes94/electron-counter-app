@@ -6,8 +6,12 @@ on:
 
 jobs:
   benchmark:
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [macos-latest, ubuntu-20.04, windows-latest]
     name: Benchmark build time
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.platform }}
     steps:
       - name: Checkout Git
         uses: actions/checkout@v2
